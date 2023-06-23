@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bitterish Bob</title>
+
+    <!--style stuff-->
+    <link href="bitterstyles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="src/bbob_icon.png">
+    
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Lato fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">        
+
+    <!-- google fonts! -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- source sans pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- roboto mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <div class="navz">
+            <!-- <div class="container">
+                <img src="src/doghaus.png" alt="home button" style="margin-left: 15px; margin-right: 20px" class="navimg" id="navimg">
+                <div class="overlay" style="margin-left: 15px;">
+                    <a href="index.html" style="padding-left: 15px; padding-top: 100px;"><img style="padding-left: 15px;" class="navicon"></a>
+                </div>
+            </div> -->
+            
+            <div class="navflex-links">
+                <a href="index.html" onclick="press()" class="buttontxt">HOME</a>
+                <a href="info.html" onclick="press()" class="buttontxt">ABOUT</a>
+            </div>
+        </div>
+        <div id = "home-page-body">
+            <div style="height: 90%; padding-bottom:35%;">
+				<p>
+					A workplace comic.<br>
+					On a scale from dark chocolate to apple cider vinegar, we're probably at a cranberry.
+				</p>
+			</div>
+
+				
+			<div id="page-footer" style="background-color: rgb(250, 250, 250); padding-top: 0px; padding-bottom: 0px; justify-content: space-between;">
+                <h2 style="padding-left: 100px;">
+                    Bitterish Bob
+                </h2>
+				
+                <div class="footz-info" style="padding-top: 5px; padding-right: 100px;">
+						<a href="https://www.instagram.com/bitterishbob/" class="instagram" alt="instagram icon"><img src="src/icon_ig_x.svg" width="35px" height="35px"></a>
+                        <a href="info.html" class="docz" alt="docz icon"><img src="src/icon_doc_g2.svg" width="35px" height="35px"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+<!-- to hide svg filters so they don't make a mess of the page layout -->
+<div style="z-index: -1; position: absolute; top: 0%;">
+    <!-- had to tuck the svg filters behind everything this time -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+        <filter id="documentz">
+            <!-- <filter id="id-of-your-filter" x="-100%" y="-100%" height="300%" width="300%"> -->
+            <feColorMatrix
+                color-interpolation-filters="sRGB"
+                type="matrix"
+                values="0.29 0   0   0   0
+                            0   1.00  0   0   0
+                            0   0   0.09  0   0
+                            0   0   0   1   0 "/>
+            </filter>
+        ...
+        </defs>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+        <filter id="instagramz">
+            <feColorMatrix
+                color-interpolation-filters="sRGB"
+                type="matrix"
+                values="1.00 0   0   0   0
+                            0   0.80  0   0   0
+                            0   0   0.13  0   0
+                            0   0   0   1   0 "/>
+        </filter>
+        ...
+        </defs>
+    </svg>
+
+    <!-- test accordion -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+</div>
+
+</html>
